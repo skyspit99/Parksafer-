@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ParkSafer - All-Day Parking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #007bff;
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    nav {
+      background: #007bff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .qr-code {
+      text-align: center;
+    }
+
+    .qr-code img {
+      width: 250px;
+      height: 250px;
+      border: 5px solid #007bff;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .stripe-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .stripe-btn:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+      .qr-code img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ParkSafer</h1>
+  </header>
+
+  <nav>
+    <a href="#howto">How It Works</a>
+    <a href="#pay">Pay Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="section" id="howto">
+    <h2>How It Works</h2>
+    <p>Pay for your all-day parking pass easily with your phone. No app download required.</p>
+    <ul>
+      <li>Scan the QR code or tap the button below</li>
+      <li>Complete your $40 all-day parking payment securely via Stripe</li>
+      <li>You're covered for the whole day!</li>
+    </ul>
+  </div>
+
+  <div class="section qr-code" id="pay">
+    <h2>Pay $40 for All-Day Parking</h2>
+    <p>Scan this QR code to pay:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://buy.stripe.com/7sIeYq7Yv2wR02YaEH" alt="Scan to Pay">
+
+    <p style="margin-top: 20px;">Or click below to pay online:</p>
+    <a class="stripe-btn" href="https://buy.stripe.com/7sIeYq7Yv2wR02YaEH" target="_blank">Pay with Stripe</a>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@parksafer.com</p>
+    <p>Phone: 1-800-123-4567</p>
+  </div>
+
+  <footer>
+    &copy; 2025 ParkSafer. All rights reserved.
+  </footer>
+
+</body>
+</html>
